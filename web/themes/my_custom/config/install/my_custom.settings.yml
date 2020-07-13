@@ -1,0 +1,52 @@
+# Library.
+# ----------------------------
+my_custom_library: 'production'
+# Layout.
+# ----------------------------
+my_custom_sidebar_position: 'both'
+my_custom_content_offset: 0
+my_custom_sidebar_first_width: 4
+my_custom_sidebar_first_offset: 0
+my_custom_sidebar_second_width: 3
+my_custom_sidebar_second_offset: 0
+
+# Container.
+# ----------------------------
+my_custom_fluid_container: 0
+
+# Buttons.
+# ----------------------------
+my_custom_button: 1
+my_custom_button_size: ''
+my_custom_button_outline: 0
+
+# Navbar.
+# ----------------------------
+my_custom_navbar_toggle: 'navbar-toggleable-lg'
+my_custom_navbar_container: 'navbar-toggleable-md'
+my_custom_navbar_top_position: ''
+my_custom_navbar_top_color: 'navbar-dark'
+my_custom_navbar_top_background: 'bg-secondary'
+my_custom_navbar_position: ''
+my_custom_navbar_color: 'navbar-dark'
+my_custom_navbar_background: 'bg-primary'
+
+# Messages.
+# ----------------------------
+my_custom_messages_widget: 'toasts'
+
+# Form.
+# ----------------------------
+my_custom_radio: 'custom'
+my_custom_checkbox: 'switch'
+my_custom_select: 'custom'
+my_custom_file: 'custom'
+
+# Colors.
+# ----------------------------
+my_custom_system_messages: 'messages_white'
+
+# Tables.
+# ----------------------------
+my_custom_table_hover: 1
+my_custom_table_style: 'table-striped'
