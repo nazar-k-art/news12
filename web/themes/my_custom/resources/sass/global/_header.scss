@@ -1,0 +1,26 @@
+
+.navbar-dark{
+  background: #000;
+}
+.container.container-mobile {
+  @include media-breakpoint-down(lg) {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    justify-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+.header_top {
+  background-image: linear-gradient(to top left, #4a2368, #242829);
+  padding-left: 0;
+  padding-right: 0;
+}
+#navbar-main {
+  background-image: linear-gradient(to bottom right, #4a2368, #242829);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0;
+  padding-right: 0;
+}

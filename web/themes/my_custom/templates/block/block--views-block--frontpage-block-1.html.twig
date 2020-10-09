@@ -29,25 +29,24 @@
  * @ingroup themeable
  */
 #}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
 
-<style>
-
-</style>
-{% set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-' ~ plugin_id|clean_class,
-] %}
 <div{{ attributes.addClass(classes) }}>
-
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}{{ content_attributes.addClass('important-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
-      <a href="#">
-        {#<img src="{{ directory }}/images/banner.jpg" alt="">#}
-        <img class="img-fluid" src="/sites/default/files/images/banner.jpg" alt="">
-        {#<img src="https://dummyimage.com/1000x200/000/fff" alt="">#}
-      </a>
-
+      {{ content }}
     </div>
   {% endblock %}
+  <div class="all_news"><a class="all_news__link" href="#">Усі новини</a></div>
 </div>

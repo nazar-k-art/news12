@@ -39,7 +39,9 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}{{ content_attributes.addClass('important-title') }}>{{ label }}</h2>
+      <div class="wrap_block_title">
+      <h2 class="block_title">{{ label }}</h2>
+      </div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}

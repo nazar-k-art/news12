@@ -29,28 +29,28 @@
  * @ingroup themeable
  */
 #}
-
-{% set classes = [
+{%
+  set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-] %}
-{% set mnths = ['','січ','лют','бер','кві','тра','чер','лип','серп','вер','жов','лист','гру'] %}
+  ]
+%}
 <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-        <div class="header_social_media d-flex align-items-center">
-            <div class="social_media">
-                <a class="social_media__link" href="#"><i class="fa fa-facebook"></i></a>
-                <a class="social_media__link" href="#"><i class="fa fa fa-instagram"></i></a>
-                <a class="social_media__link" href="#"><i class="fa fa-youtube"></i></a>
-            </div>
-            <div class="current_date">
-                <div class="current_date__day">{{ record.datepublish|date("d") }}</div>
-                <div class="current_date__month_year">
-                    <div class="current_date__month">{{ mnths[record.datepublish|date("n")] }}</div>
-                    <div class="current_date__year">{{ record.datepublish|date("Y") }}</div>
-                </div>
-            </div>
-        </div>
-    {% endblock %}
+  {{ title_prefix }}
+  {% if label %}
+      <div class="title_container">
+    <div class="wrap_title">
+    <h2{{ title_attributes }}{{ content_attributes.addClass('title') }}>{{ label }}</h2>
+    </div>
+      </div>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    <div{{ content_attributes.addClass('content') }}>
+{{ content }}
+
+
+    </div>
+  {% endblock %}
 </div>

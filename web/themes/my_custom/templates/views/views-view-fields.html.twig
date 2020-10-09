@@ -31,48 +31,28 @@
  * @ingroup themeable
  */
 #}
-<style>
-       .important{
-               font-weight: 700;
-               color: #f00;
-       }
-       .important1 a{
-               font-weight: 700;
-               color: #f0f;
-       }
-</style>
-{%
-    set classes = [
-    'bla',
-    fields.field_important.content.value == '1' ? 'important' : '12',
 
+{% for field in fields -%}
+    {{ field.separator }}
+    {%- if field.wrapper_element -%}
+        <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
+    {%- endif %}
+    {%- if field.label -%}
+        {%- if field.label_element -%}
+            <{{ field.label_element }}{{ field.label_attributes }}>{{ field.label }}{{ field.label_suffix }}</{{ field.label_element }}>
+        {%- else -%}
+            {{ field.label }}{{ field.label_suffix }}
+        {%- endif %}
+    {%- endif %}
+    {%- if field.element_type -%}
+        <{{ field.element_type }}{{ field.element_attributes }}>
+        {{ field.content }}
 
-    'important1' ? fields.field_important.value == '1' : '34',
-]
-%}
-{#{% for i in 0..5 %}#}
-        <div class="">
-            {#{{ dump(fields.content|date("H:i")) }}#}
-            {{ fields.content|date("H:i") }}
-
-            {{ fields.title.content }}
-            {#{{ dump(fields.title.content) }}#}
-
-            {#{% if field_important.content == '1' %}#}
-                    {#<span class="important">#}
-                        {#{{ fields.title.content }}#}
-                    {#</span>#}
-                {#{% else %}#}
-                    {#<span class="important1">{{ fields.title.content }}</span>#}
-            {#{% endif %}#}
-
-
-
-            {#{{ fields.field_important.content }}#}
-
-
-        </div>
-{#{% endfor %}#}
-
-
-
+        </{{ field.element_type }}>
+    {%- else -%}
+        {{ field.content }}
+    {%- endif %}
+    {%- if field.wrapper_element -%}
+        </{{ field.wrapper_element }}>
+    {%- endif %}
+{%- endfor %}

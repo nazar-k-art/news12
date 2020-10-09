@@ -1,0 +1,35 @@
+#block-views-block-frontpage-block-3{
+  padding: 15px;
+  background: #ebebeb;
+  .wrap_block_title {
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 30px;
+  }
+  .block_title {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+  }
+.views-row{
+  display: flex;
+  margin-bottom: 15px;
+  .views-field.views-field-last-updated{
+    padding-left: 7px;
+    .title a{
+      color: #2b2b2b;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .date{
+      font-size: 12px;
+    }
+  }
+}
+}

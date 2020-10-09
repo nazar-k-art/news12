@@ -30,24 +30,25 @@
  */
 #}
 
-<style>
-
-</style>
 {% set classes = [
-  'block',
-  'block-' ~ configuration.provider|clean_class,
-  'block-' ~ plugin_id|clean_class,
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'd-none d-lg-block'
 ] %}
-<div{{ attributes.addClass(classes) }}>
 
-  {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      <div class="wrap_breaking_news">
-          <button class="btn_breaking_news">Гарячі новини</button>
-          <a href="#">
-              На Волині прогнозують +28º і грозу
-          </a>
-      </div>
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes }}{{ content_attributes.addClass('five-questions-title') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    <div class="block-content">
+        <div class="breaking_news_title">Гарячі новини</div>
+        {% block content %}
+            <div{{ content_attributes.addClass('content') }}>
+                {{ content }}
+            </div>
+        {% endblock %}
     </div>
-  {% endblock %}
 </div>

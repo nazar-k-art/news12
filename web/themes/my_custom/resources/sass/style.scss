@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap&subset=cyrillic');
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/breakpoints";
+
+.container {
+  width: 90%;
+  max-width: 1480px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+}
+
+body {
+  font-family: Montserrat;
+}
+*{
+  outline: none;
+}
+
+//global
+@import 'global/header';
+@import 'global/owl-slider';
+@import 'global/pagination';
+@import "global/footer";
+
+//blocks
+@import "block/block-views-blockfrontpage-block-1";
+@import "block/block-views-blockfrontpage-block-2";
+@import "block/block-views-blockfrontpage-block-3";
+@import "block/block-views-blockfrontpage-block-4";
+@import "block/block-views-blockfrontpage-block-5";
+@import "block/block-views-blockfrontpage-block-6";
+@import "block/block-views-blockfrontpage-block-7";
+@import "block/block--socialmedia";
+
+//navigation
+@import "navigation/main-menu";
+@import "navigation/top-menu";
+
+//pages
+@import "pages/contact";
+
+//node article
+@import "article";
+//views page
+@import "view/frontpage-views";
+
+
+
+
+.sidebar .block {
+  padding: 0;
+  border: none;
+}
+
+.region-second-top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.page--page{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#scroller {
+  display: none;
+}
+
+.scroll_top {
+  position: fixed;
+  right: 30px;
+  background: #fff;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #505050;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.07);
+  &:hover {
+    background: #6a1e9c;
+    color: #fff;
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+}
+.dropdown-menu{
+  border-radius: unset;
+  background: #f7f7f7;
+}
+
+  .featured-bottom{
+    background: #f5f5f5;
+    padding-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  .logo_link {
+    padding: 0;
+    @include media-breakpoint-down(lg) {
+      order: 2;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+

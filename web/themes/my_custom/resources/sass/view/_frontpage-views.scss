@@ -1,0 +1,33 @@
+.frontpage-page{
+  .row{
+    margin-bottom: 45px;
+    align-items: center;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .field-tag{
+    a{
+      font-style: italic;
+      font-weight: 600;
+      font-size: 12px;
+      color: #6a1e9c;
+      text-decoration: none;
+    }
+  }
+  .field-title{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1;
+    a{
+      color: #2b2b2b;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    } 
+  }
+  .field-body{
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

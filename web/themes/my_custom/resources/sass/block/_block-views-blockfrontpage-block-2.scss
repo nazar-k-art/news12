@@ -1,0 +1,33 @@
+#block-views-block-frontpage-block-2{
+  padding: 15px;
+  background: #ebebeb;
+  .wrap_block_title {
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 30px;
+  }
+  .block_title {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+  }
+  .views-field-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    .field-content {
+      a {
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

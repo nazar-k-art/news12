@@ -1,0 +1,20 @@
+<footer class="footer">
+    {% block footer %}
+        <div class="{{ container }}">
+            {% if page.footer_first %}
+                <div class="footer-top clearfix">
+                    {{ page.footer_first }}
+                </div>
+            {% endif %}
+            {% if page.footer_fifth %}
+                <div class="footer-bottom">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">{{ page.footer_second }}</div>
+                        <div class="col-md-6">{{ page.footer_third }}</div>
+                    </div>
+
+                </div>
+            {% endif %}
+        </div>
+    {% endblock %}
+</footer>

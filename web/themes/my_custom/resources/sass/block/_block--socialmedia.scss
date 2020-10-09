@@ -1,0 +1,50 @@
+.current_date {
+  display: flex;
+  flex-direction: row;
+  line-height: 1;
+}
+
+.current_date__day {
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b1b1b1;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.current_date__month {
+  color: #b1b1b1;
+  font-size: 11px;
+  text-transform: uppercase;
+
+}
+
+.current_date__month_year {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current_date__year {
+  font-size: 11px;
+  color: #b1b1b1;
+}
+
+.header_social_media {
+  .social_media {
+    margin-right: 20px;
+    border-right: 1px solid #434343;
+    padding-right: 20px;
+    .social_media__link {
+      margin-right: 15px;
+      font-size: 16px;
+      color: #fff;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
