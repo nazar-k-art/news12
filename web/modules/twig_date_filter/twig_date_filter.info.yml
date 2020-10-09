@@ -1,0 +1,5 @@
+name: Twig date filter
+description: 'Date filter in twig'
+version: VERSION
+core: 8.x
+type: module

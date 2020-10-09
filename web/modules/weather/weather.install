@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the weather module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function weather_install() {
+  \Drupal::messenger()->addMessage(t('You can now import weather places to use module. Visit module configuration page: /admin/config/user-interface/weather'));
+}

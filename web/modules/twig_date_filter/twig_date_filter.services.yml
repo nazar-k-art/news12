@@ -1,0 +1,5 @@
+services:
+  twig_date_filter.twig_extensions:
+    class: Drupal\twig_date_filter\Twig\Extension\Extensions
+    tags:
+      - { name: twig.extension }
