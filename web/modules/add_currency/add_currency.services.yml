@@ -1,0 +1,4 @@
+services:
+  add_currency.currency:
+    class: Drupal\add_currency\CustomClasses\GetCurrency
+    arguments: []
